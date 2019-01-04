@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Datagrid Default
+
+   Default Mendix Datagrid Widget. The datagrid shows a list of objects in a grid
+========================================================================== */
+.mx-datagrid {
+	.mx-datagrid-head-table {
+		border: 0;
+		background-color: transparent;
+
+		/* Table header */
+		th {
+			border: 0;
+			border-bottom: 1px solid $grey-2;
+            font-weight: 700;
+            @include font-generator($small, $bold);
+            padding: 0.6315789474em 1.0526315789em 0.4736842105em 0;
+            text-align: left;
+            &.numeric{
+                text-align: right;
+            }
+		}
+
+		.mx-datagrid-head-wrapper {
+			padding: 0;
+			vertical-align: middle;
+			.mx-datagrid-head-caption {
+				white-space: normal;
+			}
+		}
+	}
+	.mx-datagrid-body-table {
+		border: 0;
+		.mx-datagrid-body tr {
+			td {
+				padding: 0.6315789474em 1.0526315789em 0.4736842105em 0;
+				border: 0;
+                @include font-generator($small, $normal);
+				border-bottom: 1px solid $grey-2;
+				vertical-align: middle;
+                
+                &.numeric{
+                    text-align: right;
+                    @include font-generator($xsmall, $normal);
+                }
+
+				&:focus {
+					outline: none;
+				}
+				/* Text without spaces */
+				.mx-datagrid-data-wrapper {
+					text-overflow: ellipsis;
+				}
+			}
+			&:hover td {
+			
+			}
+			&.selected td,
+			&.selected:hover td {
+				background-color: transparent;
+			}
+            &:nth-of-type(odd){
+                background: $white;
+            }
+		}
+		
+		/* Table Footer */
+		.mx-datagrid-foot {
+
+			> tr > th {
+				padding: 8px;
+				background-color: $brand-default-light; 
+				border-width: 0;
+			}
+
+			> tr > td {
+				background-color: $brand-default-light;
+				border-width: 0;
+				font-weight: 600;
+				padding: 8px;
+			}
+		}
+
+		& *:focus {
+			outline: 0;
+		}
+	}
+}

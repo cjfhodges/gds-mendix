@@ -1,0 +1,150 @@
+@charset "UTF-8";
+//== Mendix UI Framework - Welcome to variables file
+//## The Basic step includes the customization that is also available in the Mendix Theme Creator (https://ux.mendix.com)
+
+
+//Color palette
+$brand-default: 	                    #acacac;
+$brand-primary: 	                    #2980b9;
+$brand-inverse: 	                    #2c3e50;
+$brand-info: 	                        #3498db;
+$brand-success: 	                    #31AF64;
+$brand-warning: 	                    #f39c12;
+$brand-danger: 	                        #c0392b;
+
+
+
+
+//== Gray darkens
+//## Different gray darkens to be used for our variables and components
+$gray-darker:                           #222;
+$gray-dark:                             #333;
+$gray:                                  #666;
+$gray-light:                            #999;
+$gray-primary:                          #DDD;
+$gray-lighter:                          #eee;
+
+$font:                                  'Arial', sans-serif;
+//$bold-font:                             'Transport Bold', sans-serif;
+//$light-font:                            'Transport Light', sans-serif;
+
+//== Global Border Color
+// The default border color used by Datagrid, Listview, Tables, Dataview, Modals and more
+$brand-default:                  $gray-lighter;
+
+
+//
+
+//== Color variations
+//## These variations are used to support several other variables and components
+
+// Basic Text colors
+$text-dark:                             #000 ;
+$text-dark-light:                       lighten($text-dark, 40%) !default;
+$text-dark-disabled:                    rgba($text-dark, .26) !default;
+$text-dark-hint:                        rgba($text-dark, .26) !default;
+
+$text-light:                            #FFF !default;
+$text-lighter:                          rgba($text-light, .7) !default;
+$text-light-disabled:                   rgba($text-light, .3) !default;
+$text-light-hint:                       rgba($text-light, .3) !default;
+
+// Color variations
+$brand-default-darker:                  darken($brand-default,40) !default;    
+$brand-default-dark:                    darken($brand-default,26) !default;    
+$brand-default-light:                   lighten($brand-default,20) !default;    
+$brand-default-lighter:                 lighten($brand-default,40) !default;    
+
+$brand-inverse-darker:                  darken($brand-inverse,40) !default;    
+$brand-inverse-dark:                    darken($brand-inverse,26) !default;    
+$brand-inverse-light:                   lighten($brand-inverse,40) !default;    
+$brand-inverse-lighter:                 lighten($brand-inverse,80) !default;    
+
+$brand-primary-darker:                  darken($brand-primary,40) !default;    
+$brand-primary-dark:                    darken($brand-primary,26) !default;    
+$brand-primary-light:                   lighten($brand-primary,40) !default;    
+$brand-primary-lighter:                 lighten($brand-primary,80) !default;    
+
+$brand-info-darker:                     darken($brand-info,40) !default;    
+$brand-info-dark:                       darken($brand-info,26) !default;    
+$brand-info-light:                      lighten($brand-info,40) !default;    
+$brand-info-lighter:                    lighten($brand-info,80) !default;    
+
+$brand-success-darker:                  darken($brand-success,40) !default;    
+$brand-success-dark:                    darken($brand-success,26) !default;    
+$brand-success-light:                   lighten($brand-success,40) !default;    
+$brand-success-lighter:                 lighten($brand-success,80) !default;    
+
+$brand-warning-darker:                  darken($brand-warning,40) !default;    
+$brand-warning-dark:                    darken($brand-warning,26) !default;    
+$brand-warning-light:                   lighten($brand-warning,40) !default;    
+$brand-warning-lighter:                 lighten($brand-warning,80) !default;    
+
+$brand-danger-darker:                   darken($brand-danger,40) !default;    
+$brand-danger-dark:                     darken($brand-danger,26) !default;    
+$brand-danger-light:                    lighten($brand-danger,40) !default;    
+$brand-danger-lighter:                  lighten($brand-danger,80) !default;
+
+
+
+
+//== Mobile
+//## 
+
+//== Mobile Header
+//## Specific mobile widgets and components (used in mobile/components/mx-header)
+
+// Height
+$m-header-height:                       44px !default;
+
+// Background Color
+$m-header-bg:                           #FFF !default;
+
+
+
+
+//== Layout Spacing
+//## Advanced layout options (used in base/mixins/default-spacing)
+
+$default-spacing-top:                   0 !default;
+$default-spacing-right:                 0 !default;
+$default-spacing-bottom:                0 !default;
+$default-spacing-left:                  0 !default;
+
+$m-default-spacing-top:                 0 !default;
+$m-default-spacing-right:               0 !default;
+$m-default-spacing-bottom:              0 !default;
+$m-default-spacing-left:                0 !default;
+
+$t-default-spacing-top:                 0 !default;
+$t-default-spacing-right:               0 !default;
+$t-default-spacing-bottom:              0 !default;
+$t-default-spacing-left:                0 !default;
+
+
+
+
+//== Layouts
+//##
+
+// Scroll container / layout container default padding
+$padding-layoutcontainer-base:          0px !default; 
+$m-padding-layoutcontainer-base:        0px !default;
+$t-padding-layoutcontainer-base:        0px !default; 
+
+// Combined spacing 
+$default-spacing:                       $default-spacing-top $default-spacing-right $default-spacing-bottom $default-spacing-left !default;
+$m-default-spacing:                     $m-default-spacing-top $m-default-spacing-right $m-default-spacing-bottom $m-default-spacing-left !default;
+$t-default-spacing:                     $t-default-spacing-top $t-default-spacing-right $t-default-spacing-bottom $t-default-spacing-left !default;
+
+
+$desktop:                               769px;
+$tablet:                                641px;
+$mobile:                                $tablet - 1;
+
+$full-width: 100%;
+$one-quarter: $full-width / 4;
+$one-third: $full-width / 3;
+$half: $full-width / 2;
+$two-thirds: ($full-width) - ($one-third);
+$three-quarters: ($full-width) - ($one-quarter);

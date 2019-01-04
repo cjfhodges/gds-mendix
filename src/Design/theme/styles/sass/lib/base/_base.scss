@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Base
+
+   Default settings
+========================================================================== */
+html {
+	height: 100%;
+}
+body {
+    font-family: $font;
+	color: $text-colour;
+    font-weight: 100;
+	font-size: 16px;
+	line-height: 1.25;
+	background-color: $page-colour;
+	min-height: 100%;
+}
+a {
+	color: $govuk-blue;
+    text-decoration: underline;
+    &:focus{
+        background-color: $yellow;
+        outline: 3px solid $yellow;
+        outline-offset: 0;
+        text-decoration: underline;
+    }
+    &:visited{
+        color: $link-visited-colour;
+        text-decoration: underline;
+    }
+    &:hover, &:active{
+        color: $link-hover-colour;
+        text-decoration: underline;
+    }
+}
+
+// Removes large blue border in chrome on focus and active states 
+input:focus, 
+button:focus,
+.mx-link:focus {
+  outline: 0; 
+}
+// Removes large blue border for tabindexes from widgets
+div[tabindex] {
+	outline: 0; 
+}
+
+.inline{
+    display: inline-block;
+    & + .inline{
+        margin-left:5px;
+    }
+}
+
+.block{
+    display: block;
+}
+
+hr{
+    display: block;
+    background: $grey-2;
+    border: 0;
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+    border-top:0 !important;
+}
+
+.js-hidden{
+    display: none;
+    visibility: hidden; 
+}
+
+.js-visible{
+    display: block;
+    visibility: visible; 
+}

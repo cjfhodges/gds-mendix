@@ -1,0 +1,31 @@
+$assetPath: "../images";
+$assetPathStep: "../images/icon-steps";
+
+@mixin icon($width, $height, $img, $img-2x){
+    width: $width;
+    height: $height;
+    background-image: url(#{$assetPath}/#{$img}.png);
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+        background-image: url(#{$assetPath}/#{$img-2x}.png);
+        background-size: 100%;
+    }
+}
+
+@mixin bg-icon($width, $height, $img, $img-2x){
+    background-image: url(#{$assetPath}/#{$img}.png);
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+        background-image: url(#{$assetPath}/#{$img-2x}.png);
+        background-size: $width, $height;
+    }
+}
+
+@mixin icon-step($width, $height, $img, $img-2x){
+    width: $width;
+    height: $height;
+    background-image: url(#{$assetPathStep}/#{$img}.png);
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+        background-image: url(#{$assetPathStep}/#{$img-2x}.png);
+        background-size: 100%;
+    }
+}
+  

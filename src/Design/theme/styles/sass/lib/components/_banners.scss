@@ -1,0 +1,44 @@
+.phase-banner{
+    padding: 10px 0 8px;
+    border-bottom: 1px solid $grey-2;
+    margin-top: 10px;
+    @include clear;
+    @media (min-width:641px){
+        padding-bottom: 10px;
+    }
+    &.alpha{
+        .phase-tag{
+            background-color: $govuk-blue;
+        }
+    }
+    &.beta{
+        .phase-tag{
+            background-color: $orange;
+        }
+    }
+    p{
+        display: table;
+        margin: 0;
+        color: #000;
+        @include font-generator($xsmall, $normal);
+    }
+    .phase-tag{
+        @include inline-block;
+        margin: 0 8px 0 0;
+        padding: 2px 5px 0;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: $white;
+        @include font-generator($xsmall, $bold);
+        text-transform: uppercase;
+
+    }
+    span{
+        display: table-cell;
+        vertical-align: baseline;
+    }
+    &.phase-tag-only{
+        border: 0;
+        margin: 0;
+    }
+}

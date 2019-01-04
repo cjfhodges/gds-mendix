@@ -1,0 +1,33 @@
+.breadcrumbs {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    margin-top: 43px;
+    .breadcrumb{
+        //font-family: "nta", Arial, sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 14px;
+        line-height: 1.1428571429;
+        background-image: url(../images/separator.png);
+        background-position: 0% 50%;
+        background-repeat: no-repeat;
+        list-style: none;
+        margin-left: 0.6em;
+        margin-bottom: 0.4em;
+        padding-left: 0.9em;
+        background-color: transparent;
+        @media (min-width: 641px){
+            font-size: 16px;
+            line-height: 1.25;
+        }
+        &:first-child{
+            background-image: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        a{
+            color: $black;
+        }
+
+    }
+}

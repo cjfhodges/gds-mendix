@@ -1,0 +1,118 @@
+.main{
+    max-width: 960px;
+    margin: 0 15px;
+    padding-bottom: 30px;
+    @media (min-width: 769px){
+        padding-bottom: 90px;
+    }
+    @media (min-width: 1020px){
+        margin:0 auto;
+    }
+    @media (min-width: 641px) and (max-width: 1019px){
+        margin:0 30px;
+    }
+}
+
+.footer{
+    background-color: $grey-3;
+    border-top: 1px solid #a1acb2;
+    a{
+        color: $grey-5;
+    }
+    .footer-wrapper{
+        background-color: $grey-3;
+        max-width: 960px;
+        margin: 0 15px;
+        padding-top: 20px;
+        @media (min-width: 641px){
+            padding-top: 60px;
+        }
+        @media (min-width: 641px) and (max-width: 1019px){
+            margin: 0 30px;
+        }
+        @media (min-width: 1020px){
+            margin: 0 auto;
+        }
+        .footer-meta{
+            padding-bottom: 60px;
+            clear: both;
+            font-size: 0;
+            color: $grey-5;
+            .footer-meta-inner{
+                display: inline-block;
+                vertical-align: bottom;
+                width: 100%;
+                @media(min-width: 641px){
+                    width: 75%;
+                }
+                .open-government-licence{
+                    clear: left;
+                    position: relative;
+                    @media (min-width: 641px){
+                        padding-left: 53px;
+                    }
+                    p{
+                        //font-family: "nta", Arial, sans-serif;
+                        font-weight: 400;
+                        text-transform: none;
+                        font-size: 14px;
+                        line-height: 1.14286;
+                        margin: 0;
+                        padding-top: 0.1em;
+                        @media (min-width: 641px){
+                            font-size: 16px;
+                            line-height: 1.25;
+                        }  
+                    }
+                    .logo{
+                        @media (min-width: 641px){
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 41px;
+                            height: 100%;
+                        }
+                        margin-bottom: 1em;
+                        padding-top:0;
+                        a{
+                            display: block;
+                            width: 41px;
+                            height: 17px;
+                            overflow: hidden;
+                            text-indent: -999em;
+                            background: url(../images/open-government-licence.png?0.19.2) 0 0 no-repeat;
+                        }
+                    }
+                }
+            }
+            .copyright{
+                        //font-family: "nta", Arial, sans-serif;
+                        font-weight: 400;
+                        text-transform: none;
+                        font-size: 14px;
+                        line-height: 1.14286;
+                        margin: 30px 0 0 0;
+                        width: 100%;
+                        display: block;
+                        @media (min-width: 641px){
+                            display: inline-block;
+                            text-align: inherit;
+                            width: 25%;
+                            padding-top: 15px;
+                            margin-top: 0;
+                            font-size: 16px;
+                            line-height: 1.25;
+                        }
+                        a{
+                            display: block;
+                            background-image: url(../images/govuk-crest.png?0.19.2);
+                            background-repeat: no-repeat;
+                            background-position: 50% 0%;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 115px 0 0 0;
+                        }
+                    }
+        }
+    }
+}

@@ -1,0 +1,443 @@
+/* ==========================================================================
+   Inputs
+========================================================================== */
+.form-control {
+	@include font-generator($small, $normal);
+    padding: 5px 4px 4px;
+    color: inherit;
+    background-color: transparent;
+    border: 2px solid;
+    @include border-radius(0);
+    box-shadow: none;
+    transition: none;
+    height: 100%;
+    @media (min-width: 641px){
+        width: 50%;
+    }
+    &.form-control-3-4 {
+        width: 100%;
+        @media (min-width: 641px) {
+            width: 75%;
+        }
+    }
+    &.form-control-2-3 {
+        width: 100%;
+        @media (min-width: 641px) {
+            width: 66.66%;
+        }
+    }
+    &.form-control-1-2 {
+        width: 100%;
+        @media (min-width: 641px) {
+            width: 50%;
+        }
+    }
+    &.form-control-1-3 {
+        width: 100%;
+        @media (min-width: 641px) {
+            width: 33.33%;
+        }
+    }
+    &.form-control-1-4 {
+        width: 100%;
+        @media (min-width: 641px) {
+            width: 25%;
+        }
+    }
+    &.form-control-1-8 {
+        width: 100%;
+        @media (min-width: 641px) {
+            width: 12.5%;
+        }
+    }
+}
+
+select.form-control{
+    height: 33px;
+    background-color: $grey-4;
+}
+.form-control:focus {
+    border-color: inherit;
+	outline: 3px solid $yellow;
+    outline-offset: 0;
+    box-shadow: none;
+}
+textarea.form-control {
+	height: auto;
+    @include appearance(none);
+    @include border-radius(0);
+}
+
+.form-control-static {
+	overflow: hidden;
+	min-height: auto;
+
+	padding-top: 8;
+	padding-bottom: 8;
+	font-size: 12px;
+	line-height: $line-height-base;
+}
+/* Not editable textarea, textarea will be rendered as a label */
+.mx-textarea label {
+	height: auto;
+}
+
+/* ==========================================================================
+   Radio buttons
+========================================================================== */
+.checkbox, .radio{
+    @include clear;
+    margin: 0;
+}
+.radio-inline{
+    @include block;
+    float: left;
+    clear: none;
+    position: relative;
+    padding: 8px 10px 9px 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    @media (min-width: 641px){
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+    @media (min-width: 641px){
+        float: left;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    &:before{
+        content: "";
+        border: 2px solid;
+        background: transparent;
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include border-radius(50%);
+        @include box-sizing(content-box);
+    }
+    input[type="radio"]{
+        position: absolute;
+        cursor: pointer;
+        left: 0;
+        top: 0;
+        width: 38px;
+        height: 38px;
+        margin: 0;
+        @include opacity(0);
+    }
+    &:after{
+        content: "";
+        border: 10px solid;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        @include border-radius(50%);
+        @include opacity(0);
+        @include box-sizing(content-box);
+    }
+    &.checked{
+        &:after{
+           @include opacity(1);
+        }
+    }
+    &.focused, &:focus{
+        &:before{
+            @include box-shadow(0 0 0 5px $yellow);
+        }
+    }
+    &+.radio-inline{
+        margin: 0;
+    }
+}
+
+.RadioButtonList.form-group{
+    margin:0;
+    .form-group{
+        margin:0;
+    }
+}
+
+.radio{
+    > label{
+        @inlcude block;
+        float: none;
+        clear: left;
+        position: relative;
+        padding: 8px 10px 9px 50px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        @media (min-width: 641px){
+            float: left;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        &:before, &:after{
+            z-index: -1;
+        }
+        &:before{
+            content: "";
+            border: 2px solid;
+            background: transparent;
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include border-radius(50%);
+            @include box-sizing(content-box);
+        }
+        input[type="radio"]{
+            position: absolute;
+            cursor: pointer;
+            left: 0;
+            top: 0;
+            width: 38px;
+            height: 38px;
+            margin: 0;
+            @include opacity(0);
+            @include box-sizing(content-box);
+            z-index: 1;
+        }
+        &:after{
+            content: "";
+            border: 10px solid;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            @include border-radius(50%);
+            @include opacity(0);
+            @include box-sizing(content-box);
+        }
+        &.checked{
+            &:after{
+               @include opacity(1);
+            }
+        }
+        &.focused, &:focus{
+            &:before{
+                @include box-shadow(0 0 0 5px $yellow);
+            }
+        }
+    }
+}
+
+
+
+/* ==========================================================================
+   Group with label and input
+========================================================================== */
+/* Input and textarea get properly aligned */
+.control-label {
+    @include font-generator($small, $normal);
+    padding-bottom: 2px;
+    margin-bottom: 0;
+    padding-top: 0;
+    @include block;
+}
+.control-label-bold{
+    @include font-generator($small, $bold);
+    padding-bottom: 2px;
+    margin-bottom: 0;
+    padding-top: 0;
+    @include block;
+}
+.form-hint{
+    @include font-generator($small, $normal);
+    color: $grey-1;
+    margin-top: -2px;
+    padding-bottom: 2px;
+    @include block;
+}
+.form-group {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    @media (min-width: 641px){
+        margin-bottom: 30px;
+    }
+    .error-message{
+        display:none;
+    }
+    .panel-border-narrow {
+        float: left;
+        width: 100%;
+        padding-bottom: 0;
+    }
+    .form-date{
+        > .form-group{
+            float: left;
+            width: 50px;
+            margin-right: 20px;
+            margin-bottom: 0;
+            clear: none;
+            .form-group{
+                margin-bottom: 0;
+            }
+            .control-label{
+                @include block;
+                padding-bottom: 2px;
+            }
+            .form-control{
+                width: 100%;
+            }
+
+            &.form-group-year{
+                width: 70px;
+            }
+        }
+    }
+
+    &.form-group-compound {
+        margin-bottom: 10px;
+
+    }
+}
+
+.has-error{
+    @media (min-width: 641px){
+        border-left: 5px solid $red;
+        padding-left: 15px;
+    }
+    margin-right: 15px;
+    border-left: 4px solid $red;
+    padding-left: 10px;
+    .control-label, .checkbox, checkbox-inline, .help-block, .radio,
+    .radio-inline, label{
+        color: $black;
+    }
+    .form-control{
+        border: 4px solid #b10e1e;
+    }
+    .error-message{
+        @include font-generator($small, $bold);
+        color: $red;
+        @include block;
+        clear: both;
+        margin: 0;
+        padding: 2px 0;
+    }
+}
+
+.checkbox{
+    margin: 0;
+    label{
+        @include block;
+        float: none;
+        clear: left;
+        position: relative;
+        padding: 8px 10px 9px 50px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        @media (min-width: 641px){
+            float: left;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        &:before, &:after{
+            z-index: -1;
+        }
+        &:before{
+            content: "";
+            border: 2px solid;
+            background: transparent;
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include box-sizing(initial);
+        }
+        &:after{
+            content: "";
+            border: solid;
+            border-width: 0 0 5px 5px;
+            background: transparent;
+            width: 17px;
+            height: 7px;
+            position: absolute;
+            top: 10px;
+            left: 8px;
+            @include rotate(-45deg);
+            @include opacity(0);
+            @include box-sizing(initial);
+        }
+        input[type="checkbox"]{
+            position: absolute;
+            cursor: pointer;
+            left: 0;
+            top: 0;
+            width: 38px;
+            height: 38px;
+            @include opacity(0);
+            margin:0;
+            z-index: 1;
+        }
+    }
+    &.checked{
+        label{
+            &:after{
+                @include opacity(1);
+            }
+        }
+    }
+    &.focused{
+        label{
+            &:before{
+                outline: 3px solid #ffbf47;
+                outline-offset: 0;
+            }
+        }
+    }
+    &+.checkbox{
+        margin: 0;
+    }
+}
+
+/* ==========================================================================
+   Inputs File Upload
+========================================================================== */
+.mx-fileinput {
+	.mx-wrapped-label {
+		display: none;
+		width: auto;
+	}
+	/* File input widget hover fix */
+	.mx-wrapped-form {
+        &:focus{
+            outline: 3px solid #ffbf47;
+            outline-offset: 0;
+        }
+		.mx-wrapped-input {
+            position: relative;
+            opacity: 1;
+            right: auto;
+            bottom: auto;
+            padding: 3px;
+            @include font-generator($small, $normal);
+            &.mx-focus, &:focus{
+                background: transparent;
+                outline: 3px solid #ffbf47;
+                outline-offset: -3px;
+            }
+		}
+		.mx-fileinput-upload-button, .mx-fileinput-download-button {
+            display: none;
+        }
+	}
+}

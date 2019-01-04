@@ -1,0 +1,40 @@
+div[cssselectorhelper*="HasError"].form-group{
+    @extend .has-error;
+    .error-message{
+        display: block;
+    }
+}
+
+div[cssselectorhelper*="NoError"].form-group{
+    .error-message{
+        display: none;
+    }
+}
+.error-summary{
+    border: 4px solid $red;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 10px;
+    @media (min-width: 641px){
+        border: 5px solid $red;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px 15px 15px;
+    }
+    .error-summary-heading{
+        margin-top: 0;
+    }
+    p{
+        margin-bottom: 10px;
+    }
+    a{
+        color: #b10e1e;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-bottom: 5px;
+        @include block;
+    }
+    &:focus{
+        outline: 3px solid $yellow;
+    }
+}

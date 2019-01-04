@@ -1,0 +1,153 @@
+@mixin swatch($background, $border){
+    background-color: $background;
+    @if $border == "yes"{
+        border: 1px solid $grey-3;
+    }
+}
+
+.swatch-wrapper{
+    border: none;
+    margin: 0;
+    padding: 0;
+    @media (min-width: 641px){
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+    @media (max-width: 640px){
+        text-align: left;
+        width: 100%;
+    }
+    .desc-wrapper{
+        padding-bottom: 15px;
+        @media (max-width: 640px){
+            min-height: 75px;
+            padding-top: 10px;
+        }
+    }
+    span{
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.1428571429;
+        @media (min-width: 641px){
+            font-size: 16px;
+            line-height: 1.25;
+        }
+    }
+    .swatch{
+        width: 60px;
+        height: 60px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        @media (max-width: 640px){
+            clear: both;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        @media (min-width: 641px){
+            margin: 0 auto 15px auto;
+        }
+        &.swatch-text-colour{
+            @include swatch($text-colour, "no");
+        }
+        &.swatch-text-secondary{
+            @include swatch($secondary-text-colour, "no");
+        }
+        &.swatch-page-colour{
+            @include swatch($white, "yes");
+        }
+        &.swatch-link-colour{
+            @include swatch($link-colour, "no");
+        }
+        &.swatch-link-colour-hover{
+            @include swatch($link-hover-colour, "no");
+        }
+        &.swatch-link-colour-visited{
+            @include swatch($link-visited-colour, "no");
+        }
+        &.swatch-border-colour{
+            @include swatch($border-colour, "no");
+        }
+        &.swatch-panel-colour{
+            @include swatch($panel-colour, "no");
+        }
+        &.swatch-highlight-colour{
+            @include swatch($highlight-colour, "no");
+        }
+         &.swatch-button-colour{
+            @include swatch($button-colour, "no");
+        }
+        &.swatch-green{
+            @include swatch($green, "no");
+        }
+        &.swatch-yellow{
+            @include swatch($yellow, "no");
+        }
+        &.swatch-govuk-blue{
+            @include swatch($govuk-blue, "no");
+        }
+        &.swatch-error{
+            @include swatch($error-colour, "no");
+        }
+        &.swatch-black{
+            @include swatch($black, "no");
+        }
+        &.swatch-grey-1{
+            @include swatch($grey-1, "no");
+        }
+        &.swatch-grey-2{
+            @include swatch($grey-2, "no");
+        }
+        &.swatch-grey-3{
+            @include swatch($grey-3, "no");
+        }
+        &.swatch-grey-4{
+            @include swatch($grey-4, "no");
+        }
+        &.swatch-purple{
+            @include swatch($purple, "no");
+        }
+        &.swatch-mauve{
+            @include swatch($mauve, "no");
+        }
+        &.swatch-fuschia{
+            @include swatch($fuschia, "no");
+        }
+        &.swatch-pink{
+            @include swatch($pink, "no");
+        }
+        &.swatch-baby-pink{
+            @include swatch($baby-pink, "no");
+        }
+        &.swatch-red{
+            @include swatch($red, "no");
+        }
+        &.swatch-mellow-red{
+            @include swatch($mellow-red, "no");
+        }
+        &.swatch-orange{
+            @include swatch($orange, "no");
+        }
+        &.swatch-brown{
+            @include swatch($brown, "no");
+        }
+        &.swatch-yellow{
+            @include swatch($yellow, "no");
+        }
+        &.swatch-green{
+            @include swatch($green, "no");
+        }
+        &.swatch-grass-green{
+            @include swatch($grass-green, "no");
+        }
+        &.swatch-turquoise{
+            @include swatch($turquoise, "no");
+        }
+        &.swatch-light-blue{
+            @include swatch($light-blue, "no");
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.icon{
+    display: inline-block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.icon-calendar{
+    @include icon(27px, 27px, "icon-calendar", "icon-calendar-2x" );
+}
+
+.icon-file-download{
+    @include icon(30px, 39px, "icon-file-download", "icon-file-download-2x" );
+}
+
+.icon-important{
+    @include icon(35px, 35px, "icon-important", "icon-important-2x" );
+}
+
+.icon-information{
+    @include icon(27px, 27px, "icon-information", "icon-information-2x" );
+}
+
+.icon-locator{
+    @include icon(26px, 36px, "icon-locator", "icon-locator-2x" );
+}
+
+.icon-pointer{
+    @include icon(30px, 19px, "icon-pointer", "icon-pointer-2x" );
+}
+
+.icon-pointer-black{
+    @include icon(23px, 23px, "icon-pointer-black", "icon-pointer-black-2x" );
+}
+
+.icon-search{
+    @include icon(30px, 22px, "icon-search", "icon-search-2x" );
+}
+
+.icon-step-1{
+    @include icon-step(23px, 23px, "icon-step-1", "icon-step-1-2x" );
+}
+
+.icon-step-2{
+    @include icon-step(23px, 23px, "icon-step-2", "icon-step-2-2x" );
+}
+.icon-step-3{
+    @include icon-step(23px, 23px, "icon-step-3", "icon-step-3-2x" );
+}
+.icon-step-4{
+    @include icon-step(23px, 23px, "icon-step-4", "icon-step-4-2x" );
+}
+.icon-step-5{
+    @include icon-step(23px, 23px, "icon-step-5", "icon-step-5-2x" );
+}
+.icon-step-6{
+    @include icon-step(23px, 23px, "icon-step-6", "icon-step-6-2x" );
+}
+.icon-step-7{
+    @include icon-step(23px, 23px, "icon-step-7", "icon-step-7-2x" );
+}
+.icon-step-8{
+    @include icon-step(23px, 23px, "icon-step-8", "icon-step-8-2x" );
+}
+.icon-step-9{
+    @include icon-step(23px, 23px, "icon-step-9", "icon-step-9-2x" );
+}
+.icon-step-10{
+    @include icon-step(23px, 23px, "icon-step-10", "icon-step-10-2x" );
+}
+.icon-step-11{
+    @include icon-step(23px, 23px, "icon-step-11", "icon-step-11-2x" );
+}
+.icon-step-12{
+    @include icon-step(23px, 23px, "icon-step-12", "icon-step-12-2x" );
+}
+.icon-step-13{
+    @include icon-step(23px, 23px, "icon-step-13", "icon-step-13-2x" );
+}
+.icon-step-14{
+    @include icon-step(23px, 23px, "icon-step-14", "icon-step-14-2x" );
+}
+
+.circle{
+    display: inline-block;
+    @include border-radius(50%);
+    background: $black;
+    color: $white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    &.circle-step{
+        min-width: 24px;
+        min-height: 24px;
+        line-height: 24px;
+    }
+    &.circle-step-large {
+        font-size: 19px;
+        min-width: 38px;
+        min-height: 38px;
+        line-height: 38px;
+    }
+    &+.circle{
+        margin-left:2px;
+    }
+}
+

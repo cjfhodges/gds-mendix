@@ -1,0 +1,12 @@
+.data{
+    margin-top: 0.3125em;
+    margin-bottom: 1.25em;
+    @media (min-width: 641px){
+        margin-top: 0.2631578947em;
+        margin-bottom: 1.0526315789em;
+    }
+    .data-item{
+        display: block;
+        line-height: 1;
+    }
+}

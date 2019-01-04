@@ -1,0 +1,62 @@
+$nta-light:             "nta", Arial, sans-serif;
+$nta-light-tabular:     "ntatabularnumbers", $nta-light;
+
+
+// Line Height
+$line-height-base:                      1.5;
+$font-size-base:                        16px;
+
+$breakpoints: (
+  large: 641px
+);
+
+// Font sizes     
+$xxlarge: (
+  null  : (53px, 1.0377358491),
+  large : (80px, 1)
+);
+
+$xlarge: (
+  null  : (32px, 1.09375) ,
+  large : (48px, 1.0416666667)
+);
+
+$large: (
+  null  : (24px, 1.0416666667),
+  large : (36px, 1.1111111111)
+);
+
+$medium: (
+  null  : (19px, 1.2),
+  large : (24px, 1.25)
+);
+
+$small: (
+  null  : (16px, 1.25),
+  large : (19px, 1.3157894737)
+);
+
+$xsmall: (
+  null  : (14px, 1.1428571429),
+  large : (16px, 1.25)
+);
+
+$links: (
+  null  : (12px, 1.25),
+  large : (14px, 1.42857)
+);
+
+$lede: (
+    null: (18px, 1.2),
+    large: (24px, 1.25) 
+);
+
+$secondary: (
+    null: (20px, 1.1111111111),
+    large: (27px, 1.1111111111) 
+); 
+
+//Font-weight
+
+$bold:          700;
+$normal:        400;

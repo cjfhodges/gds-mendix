@@ -1,0 +1,72 @@
+
+@import "custom-variables";
+@import "colours";
+@import "font-sizes";
+
+// Base
+//@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "base/base";
+
+// Components
+@import "components/alerts";
+@import "components/backgrounds";
+@import "components/buttons";
+@import "components/datagrids";
+@import "components/dataview";
+@import "components/dijit-widgets";
+@import "components/fonts";
+@import "components/glyphicons";
+@import "components/grid";
+@import "components/groupbox";
+@import "components/helpers";
+@import "components/images";
+@import "components/inputs";
+@import "components/labels";
+@import "components/listview";
+@import "components/mendixsso";
+@import "components/modal";
+@import "components/navigation";
+@import "components/navigationlist";
+@import "components/tabcontainer";
+@import "components/tables";
+@import "components/templategrids";
+@import "components/typography";
+@import "components/icons";
+@import "components/breadcrumbs";
+@import "components/datavisualisation";
+@import "components/wrapper";
+@import "components/validation";
+@import "components/banners";
+@import "components/headers";
+@import "components/box-highlight";
+
+
+// Page Templates
+@import "pagetemplates/elementsindex";
+@import "pagetemplates/layouts";
+
+//Building Blocks
+//@import "buildingblocks/card";
+//@import "buildingblocks/wizard";
+@import "buildingblocks/panel";
+@import "buildingblocks/forms";
+//@import "buildingblocks/templategrid/templategrid-profilecard";
+/*
+// Mobile
+@import "mobile/layouts/base";
+
+@import "mobile/components/listview";
+@import "mobile/components/loader";
+@import "mobile/components/mx-header";
+@import "mobile/components/tabcontainer";
+*/
+//layouts
+@import "layouts/navlayout-base";
+@import "layouts/navlayout-content";
+@import "layouts/navlayout-sidebar";
+@import "layouts/navlayout-topbar";
+
+//project
+@import "project/responsive";
